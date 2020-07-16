@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>京东(JD.COM)-正品低价、品质保障、配送及时、轻松购物</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="./css/font-awesome.css">
+    <style>
+        body{
+            height: 2000px;
+            font: 12px/1.5 Microsoft YaHei,Heiti SC,tahoma,arial,Hiragino Sans GB,"\5B8B\4F53",sans-serif;
+        }
+        #shortcut{
+            background-color: #e3e4e5;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .w{
+            margin:auto;
+            width:1190px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 12px;
+        }
+
+        .fl{
+            display: block;
+            float: left;
+            margin-right: 400px;
+        }
+        /*.fr{*/
+        /*    float: left;*/
+        /*    margin-left: 410px;*/
+        /*}*/
+        .short_cut{
+            float:left;
+            height: 30px;
+            /*padding-left: 0;*/
+            /*padding-right: 7px;*/
+            margin: 0 7px;
+            color: #999999;
+
+        }
+        .line{
+            float:left;
+            height: 30px;
+            margin: 0 5px;
+            color: #999999;
+        }
+        .short_cut a:hover {
+            color: #e2231a;
+
+        }
+        .short_cut button{
+            border: none;
+            background-color: transparent;
+            color: #999;
+            font: 12px/1.5 Microsoft YaHei,Heiti SC,tahoma,arial,Hiragino Sans GB,"\5B8B\4F53",sans-serif;
+        }
+        .fr li a{
+            color: #999999;
+        }
+        #shortcut .short_cut .location{
+            float: left;
+            display: block;
+            padding: 0 10px;
+            height: 32px;
+            position: relative;
+            z-index: 202;
+
+        }
+        #shortcut .location i{
+            color: #e2231a;
+            font-size: 17px;
+        }
+
+        #shortcut .city{
+            display: none;
+            float: left;
+            position: absolute;
+            left: 164px;
+            width: 320px;
+            height: 426px;
+            background-color: white;
+            z-index: 200;
+            border: 1px solid rgb(204,204,204);
+            box-shadow:0 2px 2px rgba(0,0,256,.3);
+        }
+        #shortcut .fl:hover .city{
+            padding: 0 10px;
+            display: block;
+        }
+        #shortcut .location:hover{
+
+            height: 30px;
+            color: #e2231a;
+            background-color: white;
+            box-shadow:0 2px 2px rgba(0,0,256,.3);
+            border-bottom: none;
+        }
+        #shortcut .short_cut .login{
+            padding-left: 0;
+            padding-right: 0;
+            margin: 0;
+            color: #e2231a;
+        }
+        #shortcut .short_cut .choose{
+            padding-left: 0;
+            padding-right: 0;
+            margin: 0;
+            color: #e2231a;
+        }
+        #shortcut .myJd:hover{
+            position: relative;
+            float: left;
+            display: block;
+            background-color: white;
+            height: 28px;
+
+            border: 1px solid rgb(204,204,204);
+            box-shadow:0 2px 2px rgba(0,0,256,.3);
+            z-index: 202;
+        }
+
+        #shortcut .myJd:hover .JdList{
+            display: block;
+            float: left;
+            position: absolute;
+            width: 280px;
+            height: 160px;
+            background-color: white;
+            z-index: 200;
+            border: 1px solid rgb(204,204,204);
+            box-shadow:0 2px 2px rgba(0,0,256,.3);
+        }
+        #shortcut .choose a{
+            color:#e2231a;
+        }
+        /*#shortcut .choose{*/
+        /*    position: relative;*/
+        /*    float: left;*/
+        /*    display: block;*/
+        /*    z-index: 202;*/
+        /*}*/
+        #shortcut .choose:hover{
+            position: relative;
+            float: left;
+            display: block;
+            background-color: white;
+            height: 28px;
+
+            border: 1px solid rgb(204,204,204);
+            box-shadow:0 2px 2px rgba(0,0,256,.3);
+            z-index: 202;
+        }
+        #shortcut .choose .BuyList a{
+            display: none;
+        }
+        #shortcut .choose:hover .BuyList{
+            display: block;
+            float: left;
+            position: absolute;
+            width: 150px;
+            height: 90px;
+            background-color: white;
+            z-index: 200;
+            border: 1px solid rgb(204,204,204);
+            box-shadow:0 2px 2px rgba(0,0,256,.3);
+        }
+        #shortcut .choose:hover .BuyList a{
+            display: block;
+            float: left;
+            line-height: 20px;
+            padding: 5px 10px;
+            color: #999;
+
+        }
+        #shortcut .GuestService:hover{
+            position: relative;
+            float: left;
+            display: block;
+            background-color: white;
+            height: 28px;
+
+            border: 1px solid rgb(204,204,204);
+            box-shadow:0 2px 2px rgba(0,0,256,.3);
+            z-index: 202;
+        }
+
+        #shortcut .GuestService:hover .ServiceList{
+            display: block;
+            float: left;
+            position: absolute;
+
+            width: 320px;
+            height: 426px;
+            background-color: white;
+            z-index: 200;
+            border: 1px solid rgb(204,204,204);
+            box-shadow:0 2px 2px rgba(0,0,256,.3);
+        }
+        #shortcut .WebGuide:hover{
+            position: relative;
+            float: left;
+            display: block;
+            background-color: white;
+            height: 28px;
+
+            border: 1px solid rgb(204,204,204);
+            box-shadow:0 2px 2px rgba(0,0,256,.3);
+            z-index: 202;
+        }
+
+        #shortcut .WebGuide:hover .GuideList{
+            display: block;
+            float: left;
+            position: absolute;
+            width: 320px;
+            height: 426px;
+            background-color: white;
+            z-index: 200;
+            border: 1px solid rgb(204,204,204);
+            box-shadow:0 2px 2px rgba(0,0,256,.3);
+        }
+        #shortcut .PhoneList:hover{
+            position: relative;
+            float: left;
+            display: block;
+            background-color: white;
+            height: 28px;
+            padding: 0 6px;
+            border: 1px solid rgb(204,204,204);
+            box-shadow:0 2px 2px rgba(0,0,256,.3);
+            z-index: 202;
+        }
+        #shortcut .PhoneJd:hover .PhoneList{
+            display: block;
+            float: left;
+            position: absolute;
+            width: 320px;
+            height: 426px;
+            background-color: white;
+            z-index: 200;
+            border: 1px solid rgb(204,204,204);
+            box-shadow:0 2px 2px rgba(0,0,256,.3);
+        }
+
+        #header{
+            width:1190px;
+            height: 175px;
+            position: relative;
+
+            left:0;
+            right:0;
+            margin:auto;
+
+            border-bottom: 6px darkslategray solid;
+
+        }
+        .ClassLine{
+            position: sticky;
+            float: left;
+            height: 32px;
+            width: 1190px;
+            top:20px;
+            z-index: 6;
+            background-color: white;
+
+           
+        }
+        #logo{
+            margin: 27px 0;
+            height: 80px;
+            width: 200px;
+
+        }
+        #logo img{
+            position: absolute;
+            left: 50px;
+            height: 100px;
+
+
+        }
+        #search{
+            float: left;
+            height: 32px;
+            width: 546px;
+            position: absolute;
+            top:27px;
+            left: 260px;
+            border: 2px solid #e2231a;
+            background-color: #fff;
+
+        }
+        .TextBox input{
+            padding: 2px 44px 2px 17px;
+            width: 425px;
+            height: 26px;
+            border: 1px solid transparent;
+            line-height: 26px;
+            font-size: 12px;
+            float: left;
+        }
+        .SearchLogo button{
+            display: block;
+            float: left;
+            height: 32px;
+            width: 58px;
+            background-color: red;
+        }
+        #HotWords{
+            float: left;
+            display: block;
+            position: absolute;
+            top:65px;
+            left: 260px;
+
+        }
+        #HotWords a:hover{
+            color:red;
+        }
+        #HotWords a{
+            float: left;
+            margin-left: 12px;
+        }
+        .FirstHot{
+            color: red;
+        }
+        #BuyCar{
+            position: absolute;
+            width: 130px;
+            height: 34px;
+            line-height: 34px;
+            background-color: white;
+            border: 1px #999999 solid;
+            top:27px;
+            left: 820px;
+            text-align: center;
+        }
+        #BuyCar button{
+            position: absolute;
+            left: 0;
+            width: 50px;
+            height:34px ;
+
+        }
+        #BuyCar img{
+            position: absolute;
+            left: 0;
+            width: 50px;
+            height: 34px;
+            top:0;
+
+        }
+        #BuyCar a{
+            display: block;
+            position: absolute;
+            right:10px;
+            color: red;
+
+        }
+
+        #code{
+            height: 76px;
+            width: 76px;
+            background-color: white;
+            position: absolute;
+            left: 1100px;
+            float: right;
+            top:10px;
+            box-shadow: 0 0 10px black;
+            z-index: 6;
+
+        }
+        .code{
+            height: 66px;
+            width: 66px;
+            background-color: red;
+            margin: 5px;
+
+        }
+        .code img{
+            width: 66px;
+            height: 66px;
+        }
+        #nav{
+            float: left;
+            position: absolute;
+            top:115px;
+            left: 230px;
+            font-size: 15px;
+
+        }
+        #nav li{
+            float: left;
+            margin: 0 10px;
+        }
+        #nav li a:hover{
+            color: #e2231a;
+        }
+        #nav .fore1 a{
+            color: #e2231a;
+        }
+        .fore2 a{
+            color: #e2231a;
+        }
+
+        #fs{
+            float: left;
+            position: absolute;
+            height: 520px;
+            background-color: #f4f4f4;
+            width:1800px;
+            top:172px;
+            left: 0;
+        }
+        #CateMenu{
+            position: relative;
+            height: 450px;
+            width:200px;
+            background-color: white;
+            font-size: 15px;
+            left:160px;
+            top:10px;
+            padding-left: 10px;
+            padding-top:10px;
+            color: #636363;
+        }
+        #CateMenu li{
+            height: 25px;
+            line-height: 25px;
+        }
+        #CateMenu li:hover{
+            background-color: gainsboro;
+            height: 25px;
+            line-height: 25px;
+            width: 200px;
+        }
+        #CateMenu li a:hover{
+            color: red;
+        }
+        #SliderList{
+            position: absolute;
+            display: block;
+            float: left;
+            left: 380px;
+            top:0;
+
+        }
+        #SliderList .SlidePicture img{
+            display: block;
+            float: left;
+            position: absolute;
+            top:10px;
+            height: 460px;
+        }
+        #SliderList  #SlideButton a{
+            display: block;
+            position: absolute;
+            float: left;
+            width: 10px;
+            height: 10px;
+            background-color: #999999;
+            border-radius: 50%;
+            top:437px;
+            z-index: 20;
+
+        }
+        #SliderList #SlideButton a:hover{
+            display: block;
+            position: absolute;
+            float: left;
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            border-radius: 50%;
+            top:437px;
+            z-index: 20;
+            border: 2px lightgray solid ;
+
+
+        }
+        #SliderList .a1{
+            position: absolute;
+            left:27px;
+
+        }
+        #SliderList .a2{
+            position: absolute;
+            left:41px;
+
+        }
+        #SliderList .a3{
+            position: absolute;
+            left:55px;
+
+        }
+        #SliderList .a4{
+            position: absolute;
+            left:69px;
+
+        }
+        #SliderList .a5{
+            position: absolute;
+            left:83px;
+
+        }
+        #SliderList .a6{
+            position: absolute;
+            left:97px;
+
+        }
+        #SliderList .a7{
+            position: absolute;
+            left:111px;
+
+        }
+        #SliderList .a8{
+            position: absolute;
+            left:125px;
+
+        }
+        #RecommendItem{
+            position: absolute;
+            left: 970px;
+            top:10px;
+
+        }
+        #RecommendItem img{
+            width: 185px;
+        }
+        #RecommendItem .picture2{
+            display: block;
+            margin: 10px 0;
+        }
+        #fs_3{
+            position: absolute;
+            width: 200px;
+            height: 460px;
+            background-color: #f9f9f9;
+            left: 1170px;
+            top:10px;
+        }
+        #fs_3 a:hover{
+            color: red;
+        }
+        #fs_3 #welcome{
+            position: absolute;
+            border-bottom: #333333 10px solid;
+            height: 110px;
+        }
+        #fs_3 img{
+            position: absolute;
+
+            border-radius: 50%;
+            border: white 10px solid;
+            width: 30px;
+            top:10px;
+            left:10px;
+        }
+        #fs_3 #new .a1{
+            display: block;
+            position: absolute;
+            width: 100px;
+            left:70px;
+            top:20px;
+
+        }
+        #fs_3 #new .a2{
+            position: absolute;
+            left: 70px;
+            top:40px;
+            width: 40px;
+
+        }
+        #fs_3 #new .a3{
+            position: absolute;
+            left: 100px;
+            top:40px;
+            width: 40px;
+            margin-left:3px;
+
+
+        }
+        #fs_3 #gift .GiftForNew{
+            position: absolute;
+            left: 20px;
+            top:70px;
+            width: 60px;
+
+        }
+        #fs_3 #gift .PlusMember{
+            position: absolute;
+            left: 90px;
+            top:70px;
+            width: 60px;
+
+        }
+
+        #fs_3 #news{
+            position: absolute;
+            width: 160px;
+            top:100px;
+            left:20px;
+            border-bottom: 1px lightgray solid;
+            border-top:1px lightgray solid;
+
+        }
+        #news .title{
+            position: absolute;
+        }
+        #fs_3 #news .jdNews{
+
+            top:0;
+            display: block;
+            font-size: 16px;
+            margin: 10px 0;
+            width: 185px;
+            font-weight: bolder;
+            /*border: 2px red solid;*/
+        }
+        #fs_3 #news .more{
+            position: absolute;
+            float: left;
+            right: 40px;
+            top:2px;
+
+        }
+
+        #fs_3 #news li {
+            display: block;
+
+            position: relative;
+            width: 185px;
+
+            margin: 10px 0;
+        }
+        #fs_3 li .tag{
+            float: left;
+            display: block;
+            width: 26px;
+            padding: 2px 4px;
+            color: red;
+            background-color: linen;
+        }
+        #fs_3 #news li .content{
+            padding: 2px 4px;
+            display: block;
+            width: 140px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="shortcut">
+        <div class="w">
+            <ul class="fl">
+                <li class="short_cut location">
+                    <div>
+                        <i class="fa fa-map-marker"></i>
+                        <a href="https://www.baidu.com">位置</a>
+                    </div>
+                    <div class="city">
+
+                    </div>
+                </li>
+            </ul>
+            <ul class="fr">
+                <li class="short_cut">
+                    <a href="https://www.baidu.com" >你好，请登录</a>
+                </li>
+                <li class="short_cut">
+                    <a href="https://www.baidu.com" class="login">免费注册</a>
+                </li>
+                <li class="line">|</li>
+                <li class="short_cut">
+                    <a href="https://www.baidu.com">我的订单</a>
+                </li>
+                <li class="line">|</li>
+                <li class="short_cut myJd">
+                    <a href="https://www.baidu.com">我的京东</a>
+                    <i class="fa fa-angle-down"></i>
+                    <div class="JdList"></div>
+                </li>
+                <li class="line">|</li>
+                <li class="short_cut">
+                    <a href="https://www.baidu.com">京东会员</a>
+                </li>
+                <li class="line">|</li>
+                <li class="short_cut choose">
+                    <a href="https://www.baidu.com" >企业采购</a>
+                    <i class="fa fa-angle-down"></i>
+                    <div class="BuyList">
+                        <a href="#" target="_blank">企业购</a>
+                        <a href="#" target="_blank">商用场景管</a>
+                        <a href="#" target="_blank">工业品</a>
+                        <a href="#" target="_blank">礼品卡</a>
+                        <a href="#" target="_blank">丰客多商城</a>
+                    </div>
+                </li>
+                <li class="line">|</li>
+                <li class="short_cut GuestService">
+                    <button >客户服务</button>
+                    <i class="fa fa-angle-down"></i>
+                    <div class="ServiceList"></div>
+                </li>
+                <li class="line">|</li>
+                <li class="short_cut WebGuide">
+                    <button >网页导航</button>
+                    <i class="fa fa-angle-down"></i>
+                    <div class="GuideList"></div>
+                </li>
+                <li class="line">|</li>
+                <li class="short_cut PhoneJd">
+                    <button>手机京东</button>
+                    <div class="PhoneList"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="header">
+
+        <div class="ClassLine">
+            <div id="logo">
+                <img src="logo.png">
+            </div>
+            <div id="search">
+                <div class="TextBox">
+                    <input type="text">
+                </div>
+                <div class="SearchLogo">
+                    <button type="button"></button>
+                </div>
+            </div>
+            <div id="BuyCar">
+
+                    <img src="button.png">
+
+                <a href="#" target="_blank">我的购物车</a>
+            </div>
+        </div>
+        <div id="HotWords">
+            <a href="https://www.baidu.com" target="_blank" class="FirstHot" >口罩五折抢</a>
+            <a href="https://www.baidu.com" target="_blank" >爆款美妆</a>
+            <a href="https://www.baidu.com" target="_blank" >特价冰洗</a>
+            <a href="https://www.baidu.com" target="_blank" >二手手机</a>
+            <a href="https://www.baidu.com" target="_blank" >型格男装</a>
+            <a href="https://www.baidu.com" target="_blank" >家清纸品</a>
+            <a href="https://www.baidu.com" target="_blank" >京东电脑</a>
+            <a href="https://www.baidu.com" target="_blank" >缝纫机</a>
+        </div>
+
+        <div id="code">
+            <div class="code">
+                <img src="code.png">
+            </div>
+        </div>
+        <div id="nav">
+            <ul class="nav_items_group">
+                <li class="fore1">
+                    <a href="https:www.baidu.com">秒杀</a>
+                </li>
+                <li class="fore2">
+                    <a href="https:www.baidu.com">优惠券</a>
+                </li>
+                <li class="fore">
+                    <a href="https:www.baidu.com">PLUS会员</a>
+                </li>
+                <li class="fore">
+                    <a href="https:www.baidu.com">品牌闪购</a>
+                </li>
+                <li class="fore">
+                    <a href="https:www.baidu.com">拍卖</a>
+                </li>
+                <li class="fore">
+                    <a href="https:www.baidu.com">京东家电</a>
+                </li>
+                <li class="fore">
+                    <a href="https:www.baidu.com">京东超市</a>
+                </li>
+                <li class="fore">
+                    <a href="https:www.baidu.com">京东生鲜</a>
+                </li>
+                <li class="fore">
+                    <a href="https:www.baidu.com">京东国际</a>
+                </li>
+                <li class="fore">
+                    <a href="https:www.baidu.com">京东金融</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="fs">
+        <ul id="CateMenu">
+            <li class="cate_menu_item">
+                <a href="https://www.baidu.com/" target="_blank">家用电器</a>
+            </li>
+            <li class="cate_menu_item">
+                <a href="baidu.com" target="_blank">手机</a>/
+                <a href="baidu.com" target="_blank">运营商</a>/
+                <a href="baidu.com" target="_blank">数码</a>/
+            </li>
+            <li class="cate_menu_item">
+                <a href="baidu.com" target="_blank">电脑</a>/
+                <a href="baidu.com" target="_blank">办公</a>/
+            </li>
+            <li class="cate_menu_item">
+                <a href="baidu.com" target="_blank">家居</a>/
+                <a href="baidu.com" target="_blank">家具</a>/
+                <a href="baidu.com" target="_blank">家装</a>/
+                <a href="baidu.com" target="_blank">厨具</a>/
+
+            </li>
+            <li class="cate_menu_item">
+                <a href="baidu.com" target="_blank">男装</a>/
+                <a href="baidu.com" target="_blank">女装</a>/
+                <a href="baidu.com" target="_blank">童装</a>/
+                <a href="baidu.com" target="_blank">内衣</a>/
+            </li>
+            <li class="cate_menu_item">
+                <a href="baidu.com" target="_blank">美妆</a>/
+                <a href="baidu.com" target="_blank">个护清洁</a>/
+                <a href="baidu.com" target="_blank">宠物</a>/
+            </li>
+            <li class="cate_menu_item">
+                <a href="baidu.com" target="_blank">女鞋</a>/
+                <a href="baidu.com" target="_blank">箱包</a>/
+                <a href="baidu.com" target="_blank">钟表</a>/
+                <a href="baidu.com" target="_blank">珠宝</a>/
+            </li>
+            <li class="cate_menu_item">
+                <a href="baidu.com" target="_blank">男鞋</a>/
+                <a href="baidu.com" target="_blank">运动</a>/
+                <a href="baidu.com" target="_blank">户外</a>/
+            </li>
+            <li class="cate_menu_item">
+                <a href="baidu.com" target="_blank">房产</a>/
+                <a href="baidu.com" target="_blank">汽车</a>/
+                <a href="baidu.com" target="_blank">汽车用品</a>/
+            </li>
+            <li class="cate_menu_item">
+                <a href="baidu.com" target="_blank">母婴</a>/
+                <a href="baidu.com" target="_blank">玩具乐器</a>/
+            </li>
+            <li class="cate_menu_item">
+                <a href="baidu.com" target="_blank">食品</a>/
+                <a href="baidu.com" target="_blank">酒类</a>/
+                <a href="baidu.com" target="_blank">生鲜</a>/
+                <a href="baidu.com" target="_blank">特产</a>/
+            </li>
+            <li class="cate_menu_item">
+                <a href="baidu.com" target="_blank">艺术</a>/
+                <a href="baidu.com" target="_blank">礼品鲜花</a>/
+                <a href="baidu.com" target="_blank">农资绿植</a>/
+            </li>
+            <li class="cate_menu_item">
+                <a href="baidu.com" target="_blank">医药保健</a>/
+                <a href="baidu.com" target="_blank">计生情趣</a>/
+            </li>
+            <li class="cate_menu_item">
+                <a href="baidu.com" target="_blank">图书</a>/
+                <a href="baidu.com" target="_blank">文娱</a>/
+                <a href="baidu.com" target="_blank">教育</a>/
+                <a href="baidu.com" target="_blank">电子书</a>/
+            </li>
+            <li class="cate_menu_item">
+                <a href="baidu.com" target="_blank">机票</a>/
+                <a href="baidu.com" target="_blank">酒店</a>/
+                <a href="baidu.com" target="_blank">旅游</a>/
+                <a href="baidu.com" target="_blank">生活</a>/
+            </li>
+            <li class="cate_menu_item">
+                <a href="baidu.com" target="_blank">理财</a>/
+                <a href="baidu.com" target="_blank">众筹</a>/
+                <a href="baidu.com" target="_blank">白条</a>/
+                <a href="baidu.com" target="_blank">保险</a>/
+            </li>
+            <li class="cate_menu_item">
+                <a href="baidu.com" target="_blank">安装</a>/
+                <a href="baidu.com" target="_blank">维修</a>/
+                <a href="baidu.com" target="_blank">清洗</a>/
+                <a href="baidu.com" target="_blank">二手</a>/
+            </li>
+            <li class="cate_menu_item">
+                <a href="baidu.com" target="_blank">工业品</a>
+            </li>
+
+        </ul>
+        <ul id="SliderList">
+            <li id="SlideButton">
+                <a class="a1" href="slide1.jpg" target="_blank"></a>
+                <a class="a2" href="slide2.jpg" target="_blank"></a>
+                <a class="a3" href="slide3.jpg" target="_blank"></a>
+                <a class="a4" href="slide4.jpg" target="_blank"></a>
+                <a class="a5" href="slide5.jpg" target="_blank"></a>
+                <a class="a6" href="slide6.jpg" target="_blank"></a>
+                <a class="a7" href="slide7.jpg" target="_blank"></a>
+                <a class="a8" href="slide8.jpg" target="_blank"></a>
+
+            </li>
+            <li>
+                <a  class="SlidePicture" href="#">
+                    <img src="slide1.jpg">
+                </a>
+            </li>
+            <li>
+                <a  class="SlidePicture" href="#">
+                    <img src="slide2.jpg">
+                </a>
+            </li>
+            <li >
+                <a  class="SlidePicture" href="#">
+                    <img src="slide3.jpg">
+                </a>
+            </li>
+            <li >
+                <a  class="SlidePicture" href="#">
+                    <img src="slide4.jpg">
+                </a>
+            </li>
+            <li>
+                <a  class="SlidePicture" href="#">
+                    <img src="slide5.jpg">
+                </a>
+            </li>
+            <li>
+                <a  class="SlidePicture" href="#">
+                    <img src="slide6.jpg">
+                </a>
+            </li>
+            <li>
+                <a  class="SlidePicture" href="#">
+                    <img src="slide7.jpg">
+                </a>
+            </li>
+            <li>
+                <a  class="SlidePicture" href="#">
+                    <img src="slide8.jpg">
+                </a>
+            </li>
+
+
+        </ul>
+        <ul id="RecommendItem">
+            <li>
+                <a href="https://www.baidu.com" target="_blank">
+                    <img class="recommend-item-image" src="/jd/picture1.png">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.baidu.com" target="_blank" class="picture2">
+                    <img class="recommend-item-image" src="/jd/picture2.png">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.baidu.com" target="_blank">
+                    <img class="recommend-item-image" src="/jd/picture3.png">
+                </a>
+            </li>
+
+        </ul>
+        <div id="fs_3">
+            <div id="welcome">
+                <div id="new">
+                    <div class="welcomeLogo">
+                         <img src="logo.png">
+                    </div>
+                    <a href="#" target="_blank" class="a1">Hi~欢迎来到京东</a>
+                    <a href="#" target="_blank" class="a2">登录 |</a>
+
+                    <a href="#" target="_blank" class="a3"> 注册</a>
+                </div>
+                <div id="gift">
+                    <button class="GiftForNew">新人福利</button>
+                    <button class="PlusMember">plus会员</button>
+                </div>
+            </div>
+            <div id="news">
+                <ul>
+                    <li class="title">
+                        <div class="jdNews">京东快报</div>
+                        <a href="#" target="_blank" class="more">更多</a>
+                    </li>
+
+
+                    <li>
+                        <a href="#" target="_blank" class="tag">最新</a>
+                        <a href="#" target="_blank" class="content">风感细腻电风扇，舒爽送风不惧炎热夏天</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank" class="tag">最新</a>
+                        <a href="#" target="_blank" class="content">爱国者BW01智能手表评测：机械魅力融合科技，优雅随行</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank" class="tag">HOT</a>
+                        <a href="#" target="_blank" class="content">冲奶粉不做这个动作，奶粉最贵都放浪费</a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank" class="tag">热评</a>
+                        <a href="#" target="_blank" class="content">华硕全千兆路由器，上网速度一骑绝尘</a>
+                    </li>
+
+                </ul>
+
+            </div>
+            <div id="book"></div>
+
+        </div>
+    </div>
+
+    <div id="app"></div>
+</body>
+</html>
