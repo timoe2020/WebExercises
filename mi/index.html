@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>小米商城-小米10 Pro、Redmi 10x、小米MIX Alpha,小米电视...</title>
+    <link rel="stylesheet" href="./css/font-awesome.css">
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        * {
+            border: none;
+        }
+
+        body {
+            font: 14px/1.5 Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
+            height: 2000px;
+        }
+
+        .TopNav {
+            font-size: 12px;
+            height: 40px;
+            line-height: 40px;
+            width: 100%;
+            background: #333333;
+            color: #424242;
+        }
+
+        .TopNav li {
+            float: left;
+        }
+
+        .TopNav a {
+            color: #b0b0b0;
+        }
+
+        .TopNav a:hover {
+            color: white;
+        }
+
+        .shop .line {
+            margin: 0 7px;
+        }
+
+        .shop {
+            float: left;
+            margin-left: 148px;
+        }
+
+        .CodeBox {
+            display: none;
+            position: absolute;
+            left: 670px;
+            top: 40px;
+            height: 150px;
+            width: 126px;
+            background: white;
+            box-shadow: 0 0 5px #b0b0b0;
+            border: white 1px solid;
+        }
+
+        .CodeBox .code img {
+            position: absolute;
+            width: 90px;
+            height: 90px;
+            margin: 18px;
+            z-index: 30;
+        }
+
+        .CodeBox .word {
+            position: absolute;
+            top: 110px;
+            margin-left: 18px;
+            font-size: 15px;
+        }
+
+        #download:hover .CodeBox {
+            display: block;
+        }
+
+        .LoginBar {
+            float: left;
+            margin-left: 248px;
+        }
+
+        .LoginBar .line {
+            padding: 0 5px;
+        }
+
+        .LoginBar .inform {
+            padding: 0 5px;
+        }
+
+        .BuyCar {
+            position: relative;
+            float: left;
+            width: 120px;
+            height: 40px;
+            line-height: 40px;
+            background: #3b3939;
+            margin-left: 20px;
+        }
+
+        .BuyCar .BuyList {
+            display: none;
+            position: absolute;
+            top: 40px;
+            right: 0;
+            width: 200px;
+            height: 100px;
+            background: white;
+        }
+
+        .BuyCar:hover {
+            background: white;
+        }
+
+        .BuyCar:hover .BuyList {
+            display: block;
+        }
+
+        .BuyCar:hover i {
+            color: orangered;
+        }
+
+        .BuyCar:hover .word {
+            color: orangered;
+        }
+
+        .BuyCar:visited {
+            color: white;
+            background: orangered;
+        }
+
+        .BuyCar .fa-shopping-cart {
+            display: block;
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            color: #b0b0b0;
+            font-size: 20px;
+        }
+
+        .BuyCar .word {
+            color: #b0b0b0;
+            float: left;
+            position: absolute;
+            top: 5px;
+            left: 34px;
+            width: 60px;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        .header {
+            width: 100%;
+            height: 100px;
+
+        }
+
+        .header li {
+            float: left;
+            font-size: 16px;
+
+        }
+
+        .header a {
+            font-size: 16px;
+        }
+
+        .header .logo {
+            display: block;
+            float: left;
+            position: absolute;
+            width: 55px;
+            height: 55px;
+            background: #ff6700;
+            margin: 20px 0 20px 150px;
+        }
+
+        .logo i {
+            color: white;
+            font-size: 31px;
+            margin: 12px;
+        }
+
+        .header .menu {
+            float: left;
+            display: block;
+            line-height: 88px;
+            margin-left: 380px;
+
+        }
+
+        .header .menu li:hover {
+            color: orange;
+        }
+
+        .header .menu a:hover {
+            color: orange;
+        }
+
+        .header .menu li {
+            margin: 10px;
+        }
+
+        #mibar {
+            display: none;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 220px;
+            background: white;
+            border: 1px gray solid;
+            box-shadow: 0 0 3px #b0b0b0;
+        }
+
+        #mibar #miList {
+            display: block;
+            margin: 0 160px;
+        }
+
+        #mibar img {
+            padding: 50px;
+            width: 90px;
+            height: 90px;
+            border-right: 1px lightgray solid;
+        }
+
+        .miPhone:hover #mibar {
+
+            position: absolute;
+            left: 0;
+            display: block;
+            z-index: 400;
+        }
+
+        #redbar {
+            display: none;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 220px;
+            background: white;
+            border: 1px gray solid;
+            box-shadow: 0 0 3px #b0b0b0;
+        }
+
+        #redbar #redmiList {
+            display: block;
+            margin: 0 160px;
+        }
+
+        #redbar img {
+            padding: 50px;
+            width: 90px;
+            height: 90px;
+            border-right: 1px lightgray solid;
+        }
+
+        .redmiPhone:hover #redbar {
+
+            position: absolute;
+            left: 0;
+            display: block;
+            z-index: 400;
+        }
+
+        #TVbar {
+            display: none;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 220px;
+            background: white;
+            border: 1px gray solid;
+            box-shadow: 0 0 3px #b0b0b0;
+        }
+
+        #TVbar #TVList {
+            display: block;
+            margin: 0 160px;
+        }
+
+        #TVbar img {
+            padding: 50px;
+            width: 90px;
+            height: 90px;
+            border-right: 1px lightgray solid;
+        }
+
+        .TV:hover #TVbar {
+
+            position: absolute;
+            left: 0;
+            display: block;
+            z-index: 400;
+        }
+
+        #ComputerBar {
+            display: none;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 220px;
+            background: white;
+            border: 1px gray solid;
+            box-shadow: 0 0 3px #b0b0b0;
+        }
+
+        #ComputerBar #ComputerList {
+            display: block;
+            margin: 0 160px;
+        }
+
+        #ComputerBar img {
+            padding: 50px;
+            width: 90px;
+            height: 90px;
+            border-right: 1px lightgray solid;
+        }
+
+        .computer:hover #ComputerBar {
+
+            position: absolute;
+            left: 0;
+            display: block;
+            z-index: 400;
+        }
+
+        #ApplianceBar {
+            display: none;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 220px;
+            background: white;
+            border: 1px gray solid;
+            box-shadow: 0 0 3px #b0b0b0;
+        }
+
+        #ApplianceBar #ApplianceList {
+            display: block;
+            margin: 0 160px;
+        }
+
+        #ApplianceBar img {
+            padding: 50px;
+            width: 90px;
+            height: 90px;
+            border-right: 1px lightgray solid;
+        }
+
+        .appliance:hover #ApplianceBar {
+
+            position: absolute;
+            left: 0;
+            display: block;
+            z-index: 400;
+        }
+
+        #RouterBar {
+            display: none;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 220px;
+            background: white;
+            border: 1px gray solid;
+            box-shadow: 0 0 3px #b0b0b0;
+        }
+
+        #RouterBar #RouterList {
+            display: block;
+            margin: 0 160px;
+        }
+
+        #RouterBar img {
+            padding: 50px;
+            width: 90px;
+            height: 90px;
+            border-right: 1px lightgray solid;
+        }
+
+        .Router:hover #RouterBar {
+
+            position: absolute;
+            left: 0;
+            display: block;
+            z-index: 400;
+        }
+
+        #HardwareBar {
+            display: none;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 220px;
+            background: white;
+            border: 1px gray solid;
+            box-shadow: 0 0 3px #b0b0b0;
+        }
+
+        #HardwareBar #HardwareList {
+            display: block;
+            margin: 0 160px;
+        }
+
+        #HardwareBar img {
+            padding: 50px;
+            width: 90px;
+            height: 90px;
+            border-right: 1px lightgray solid;
+        }
+
+        .Hardware:hover #HardwareBar {
+
+            position: absolute;
+            left: 0;
+            display: block;
+            z-index: 400;
+        }
+
+        .search {
+            position: relative;
+            float: left;
+            width: 290px;
+            height: 54px;
+            margin: 25px 90px;
+            border: 1px #d7d6d6 solid;
+        }
+
+        .search .SearchBox input {
+            display: block;
+            float: left;
+            width: 234px;
+            height: 54px;
+            font: 14px/1.5 Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
+            border-right: 1px #d7d6d6 solid;
+
+
+        }
+
+        .search .submit button {
+            position: relative;
+            float: left;
+            width: 55px;
+            height: 54px;
+
+
+        }
+
+        .search .submit .fa-search {
+            font-size: 20px;
+
+        }
+
+        .search:hover {
+            border: 1px #908e8e solid;
+        }
+
+        .SearchBox input:hover {
+            border-right: #908e8e 1px solid;
+        }
+
+        .submit button:hover {
+            border-left: #908e8e 1px solid;
+            background: orangered;
+            color: white;
+            background-clip: border-box;
+        }
+
+
+        .container {
+            float: left;
+            margin: 0 150px;
+            width: 1220px;
+            height: 460px;
+
+        }
+
+        .sidebar {
+            position: relative;
+            float: left;
+            width: 230px;
+            height: 420px;
+            background: rgba(95, 94, 94, .6);
+            z-index: 30;
+            color: white;
+            padding: 20px 0;
+        }
+
+        .sidebar li {
+            height: 42px;
+            line-height: 42px;
+            padding-left: 30px;
+        }
+
+        .sidebar li:hover{
+            background: #ff6700;
+        }
+
+        .sidebar a {
+            color: white;
+
+        }
+        .sidebar i{
+            margin-right: 15px;
+            font-size: 20px;
+            color: white;
+            width: 10px;
+            height: 42px;
+            line-height: 42px;
+
+        }
+        .SubNav1 .SidePhoneList{
+            display: none;
+            position: absolute;
+            width: 990px;
+            height: 460px;
+            background: white;
+            box-shadow: #a3a1a1 0 0 5px;
+            left: 230px;
+            top: 0;
+
+
+        }
+        .SubNav1:hover .SidePhoneList{
+            display: block;
+        }
+        .SubNav2 .SideTVList{
+            display: none;
+            position: absolute;
+            width: 990px;
+            height: 460px;
+            background: white;
+            box-shadow: #a3a1a1 0 0 5px;
+            left: 230px;
+            top: 0;
+        }
+        .SubNav2:hover .SideTVList{
+            display: block;
+        }
+        .SubNav3 .SidePadList{
+            display: none;
+            position: absolute;
+            width: 495px;
+            height: 460px;
+            background: white;
+            box-shadow: #a3a1a1 0 0 5px;
+            left: 230px;
+            top: 0;
+        }
+        .SubNav3:hover .SidePadList{
+            display: block;
+        }
+        .SubNav4 .SideFamilyList{
+            display: none;
+            position: absolute;
+            width: 990px;
+            height: 460px;
+            background: white;
+            box-shadow: #a3a1a1 0 0 5px;
+            left: 230px;
+            top: 0;
+        }
+        .SubNav4:hover .SideFamilyList{
+            display: block;
+        }
+        .SubNav5 .SideTravelList{
+            display: none;
+            position: absolute;
+            width: 743px;
+            height: 460px;
+            background: white;
+            box-shadow: #a3a1a1 0 0 5px;
+            left: 230px;
+            top: 0;
+        }
+        .SubNav5:hover .SideTravelList{
+            display: block;
+        }
+        .SubNav6 .SideSmartList{
+            display: none;
+            position: absolute;
+            width: 743px;
+            height: 460px;
+            background: white;
+            box-shadow: #a3a1a1 0 0 5px;
+            left: 230px;
+            top: 0;
+        }
+        .SubNav6:hover .SideSmartList{
+            display: block;
+        }
+        .SubNav7 .SideHardwareList{
+            display: none;
+            position: absolute;
+            width: 495px;
+            height: 460px;
+            background: white;
+            box-shadow: #a3a1a1 0 0 5px;
+            left: 230px;
+            top: 0;
+        }
+        .SubNav7:hover .SideHardwareList{
+            display: block;
+        }
+        .SubNav8 .SideHealthList{
+            display: none;
+            position: absolute;
+            width: 743px;
+            height: 460px;
+            background: white;
+            box-shadow: #a3a1a1 0 0 5px;
+            left: 230px;
+            top: 0;
+        }
+        .SubNav8:hover .SideHealthList{
+            display: block;
+        }
+        .SubNav9 .SideMusicList{
+            display: none;
+            position: absolute;
+            width: 743px;
+            height: 460px;
+            background: white;
+            box-shadow: #a3a1a1 0 0 5px;
+            left: 230px;
+            top: 0;
+        }
+        .SubNav9:hover .SideMusicList{
+            display: block;
+        }
+        .SubNav10 .SideLifeList{
+            display: none;
+            position: absolute;
+            width: 743px;
+            height: 460px;
+            background: white;
+            box-shadow: #a3a1a1 0 0 5px;
+            left: 230px;
+            top: 0;
+        }
+        .SubNav10:hover .SideLifeList{
+            display: block;
+        }
+
+
+        .banner {
+            position: relative;
+            float: left;
+            width: 990px;
+            height: 460px;
+            background-image: url("slide1.png");
+            background-size: auto 460px;
+            background-repeat: no-repeat;
+            background-position: -235px 0;
+        }
+
+        .banner .button {
+            float: left;
+            position: relative;
+            top: 425px;
+            left: 800px;
+
+        }
+
+        .banner a {
+            float: left;
+            position: relative;
+            border-radius: 50%;
+            width: 5px;
+            height: 5px;
+            background: grey;
+            margin: 0 5px;
+            border: 2px #a3a1a1 solid;
+        }
+
+        .banner a:hover {
+            background: #d7d6d6;
+        }
+
+        .arrow {
+            position: relative;
+        }
+
+        .arrow i {
+            position: absolute;
+            top: 190px;
+            font-size: 60px;
+            color: #b1afaf;
+        }
+
+        .fa-angle-left {
+            position: absolute;
+            left: 10px;
+        }
+
+        .fa-angle-right {
+            position: absolute;
+            right: 10px;
+        }
+
+        .arrow i:hover {
+            position: absolute;
+            color: white;
+            z-index: 22;
+        }
+
+        .next i:hover + .right {
+            position: absolute;
+            right: 0;
+            width: 40px;
+            height: 80px;
+            background: #636262;
+            top: 185px;
+
+        }
+
+        .last i:hover + .left {
+            position: absolute;
+            width: 40px;
+            height: 80px;
+            left: 0;
+            background: #636262;
+            top: 185px;
+
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="TopNav">
+    <div class="shop">
+        <ul>
+            <li>
+                <a href="index.html">小米商城</a>
+            </li>
+            <li class="line">
+                <span>|</span>
+            </li>
+            <li>
+                <a href="https://home.miui.com/" target="_blank">MIUI</a>
+            </li>
+            <li class="line">
+                <span>|</span>
+            </li>
+            <li>
+                <a href="https://iot.mi.com/new/index.html" target="_blank">loT</a>
+            </li>
+            <li class="line">
+                <span>|</span>
+            </li>
+            <li>
+                <a href="https://i.mi.com/" target="_blank">云服务</a>
+            </li>
+            <li class="line">
+                <span>|</span>
+            </li>
+            <li>
+                <a href="https://jr.mi.com/?from=micom" target="_blank">金融</a>
+            </li>
+            <li class="line">
+                <span>|</span>
+            </li>
+            <li>
+                <a href="https://youpin.mi.com/" target="_blank">有品</a>
+            </li>
+            <li class="line">
+                <span>|</span>
+            </li>
+            <li>
+                <a href="https://xiaoai.mi.com/" target="_blank">小爱开放平台</a>
+            </li>
+            <li class="line">
+                <span>|</span>
+            </li>
+            <li>
+                <a href="https://qiye.mi.com/" target="_blank">企业团购</a>
+            </li>
+            <li class="line">
+                <span>|</span>
+            </li>
+            <li>
+                <a href="https://www.mi.com/aptitude/list?id=41" target="_blank">资质证照</a>
+            </li>
+            <li class="line">
+                <span>|</span>
+            </li>
+            <li>
+                <a href="https://www.mi.com/aptitude/list?id=7" target="_blank">协议规则</a>
+            </li>
+            <li class="line">
+                <span>|</span>
+            </li>
+            <li id="download">
+                <a href="https://www.mi.com/appdownload" target="_blank">下载app</a>
+                <div class="CodeBox">
+                    <div class="code">
+                        <img src="QRcode.png">
+                    </div>
+                    <div class="word">小米商城APP</div>
+                </div>
+            </li>
+            <li class="line">
+                <span>|</span>
+            </li>
+            <li>
+                <a href="#">Select Location</a>
+            </li>
+
+        </ul>
+    </div>
+    <div class="LoginBar">
+        <ul>
+            <li id="login">
+                <a href="login.html">登录</a>
+            </li>
+            <li class="line">
+                <span>|</span>
+            </li>
+            <li id="register">
+                <a href="register.html">注册</a>
+            </li>
+            <li class="line">
+                <span>|</span>
+            </li>
+            <li class="inform">
+                <a href="#">消息通知</a>
+            </li>
+        </ul>
+    </div>
+    <div class="BuyCar">
+        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        <div class="word">购物车(0)</div>
+        <div class="BuyList"></div>
+    </div>
+</div>
+<div class="header">
+    <div class="logo">
+        <i class="fa fa-maxcdn" aria-hidden="true"></i>
+    </div>
+    <div class="menu">
+        <ul>
+            <li class="miPhone">
+                <span>小米手机</span>
+                <div id="mibar">
+                    <div id="miList">
+                        <a href="index.html"><img src="QRcode.png" alt="小米手机"></a>
+                        <a href="index.html"><img src="QRcode.png" alt="小米手机"></a>
+                        <a href="index.html"><img src="QRcode.png" alt="小米手机"></a>
+                        <a href="index.html"><img src="QRcode.png" alt="小米手机"></a>
+                        <a href="index.html"><img src="QRcode.png" alt="小米手机"></a>
+                        <a href="index.html"><img src="QRcode.png" alt="小米手机"></a>
+                    </div>
+                </div>
+            </li>
+            <li class="redmiPhone">
+                <span>Redmi红米</span>
+                <div id="redbar">
+                    <div id="redmiList">
+                        <a href="index.html"><img src="QRcode.png" alt="红米手机"></a>
+                        <a href="index.html"><img src="QRcode.png" alt="红米手机"></a>
+                        <a href="index.html"><img src="QRcode.png" alt="红米手机"></a>
+                        <a href="index.html"><img src="QRcode.png" alt="红米手机"></a>
+                        <a href="index.html"><img src="QRcode.png" alt="红米手机"></a>
+                        <a href="index.html"><img src="QRcode.png" alt="红米手机"></a>
+                    </div>
+                </div>
+            </li>
+            <li class="TV">
+                <span>电视</span>
+                <div id="TVbar">
+                    <div id="TVList">
+                        <a href="index.html"><img src="QRcode.png" alt="小米电视"></a>
+                        <a href="index.html"><img src="QRcode.png" alt="小米电视"></a>
+                        <a href="index.html"><img src="QRcode.png" alt="小米电视"></a>
+                        <a href="index.html"><img src="QRcode.png" alt="小米电视"></a>
+                        <a href="index.html"><img src="QRcode.png" alt="小米电视"></a>
+                        <a href="index.html"><img src="QRcode.png" alt="小米电视"></a>
+
+                    </div>
+                </div>
+            </li>
+            <li class="computer">
+                <span>笔记本</span>
+                <div id="ComputerBar">
+                    <div id="ComputerList">
+                        <a href="index.html"><img src="QRcode.png" alt="小米笔记本"></a>
+                        <a href="index.html"><img src="QRcode.png" alt="小米笔记本"></a>
+                        <a href="index.html"><img src="QRcode.png" alt="小米笔记本"></a>
+                        <a href="index.html"><img src="QRcode.png" alt="小米笔记本"></a>
+                        <a href="index.html"><img src="QRcode.png" alt="小米笔记本"></a>
+                        <a href="index.html"><img src="QRcode.png" alt="小米笔记本"></a>
+
+                    </div>
+                </div>
+            </li>
+            <li class="appliance">
+                <span>家电</span>
+                <div id="ApplianceBar">
+                    <div id="ApplianceList">
+                        <a href="index.html"><img src="QRcode.png" alt="小米家电"></a>
+                        <a href="index.html"><img src="QRcode.png" alt="小米家电"></a>
+                        <a href="index.html"><img src="QRcode.png" alt="小米家电"></a>
+                        <a href="index.html"><img src="QRcode.png" alt="小米家电"></a>
+                        <a href="index.html"><img src="QRcode.png" alt="小米家电"></a>
+                        <a href="index.html"><img src="QRcode.png" alt="小米家电"></a>
+                    </div>
+                </div>
+            </li>
+            <li class="Router">
+                <span>路由器</span>
+                <div id="RouterBar">
+                    <div id="RouterList">
+                        <a href="index.html"><img src="QRcode.png" alt="小米路由器"></a>
+                        <a href="index.html"><img src="QRcode.png" alt="小米路由器"></a>
+                        <a href="index.html"><img src="QRcode.png" alt="小米路由器"></a>
+                        <a href="index.html"><img src="QRcode.png" alt="小米路由器"></a>
+                        <a href="index.html"><img src="QRcode.png" alt="小米路由器"></a>
+                        <a href="index.html"><img src="QRcode.png" alt="小米路由器"></a>
+
+                    </div>
+                </div>
+            </li>
+            <li class="Hardware">
+                <span>智能硬件</span>
+                <div id="HardwareBar">
+                    <div id="HardwareList">
+                        <a href="index.html"><img src="QRcode.png" alt="小米智能硬件"></a>
+                        <a href="index.html"><img src="QRcode.png" alt="小米智能硬件"></a>
+                        <a href="index.html"><img src="QRcode.png" alt="小米智能硬件"></a>
+                        <a href="index.html"><img src="QRcode.png" alt="小米智能硬件"></a>
+                        <a href="index.html"><img src="QRcode.png" alt="小米智能硬件"></a>
+                        <a href="index.html"><img src="QRcode.png" alt="小米智能硬件"></a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="https://www.mi.com/service" target="_blank">服务</a>
+            </li>
+            <li>
+                <a href="https://www.xiaomi.cn/" target="_blank">社区</a>
+            </li>
+
+        </ul>
+    </div>
+    <div class="search">
+        <div class="SearchBox">
+            <label>
+                <input type="text" value="家电">
+            </label>
+        </div>
+        <div class="submit">
+            <button type="submit">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="sidebar">
+        <ul>
+            <li class="SubNav1">
+                <a href="index.html">手机</a>
+                <a>电话卡</a>
+                <a class="angle"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                <div class="SidePhoneList"></div>
+            </li>
+            <li class="SubNav2"><a>电视</a>
+                <a>盒子</a>
+                <a class="angle"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                <div class="SideTVList"></div>
+            </li>
+            <li class="SubNav3">
+                <a>笔记本</a>
+                <a>显示器</a>
+                <a>平板</a>
+                <a class="angle"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                <div class="SidePadList"></div>
+            </li>
+            <li class="SubNav4">
+                <a>家电</a>
+                <a>插线板</a>
+                <a class="angle"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                <div class="SideFamilyList"></div>
+            </li>
+            <li class="SubNav5">
+                <a>出行</a>
+                <a>穿戴</a>
+                <a class="angle"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                <div class="SideTravelList"></div>
+            </li>
+            <li class="SubNav6">
+                <a>智能</a>
+                <a>路由器</a>
+                <a class="angle"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                <div class="SideSmartList"></div>
+            </li>
+            <li class="SubNav7">
+                <a>电源</a>
+                <a>配件</a>
+                <a class="angle"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                <div class="SideHardwareList"></div>
+            </li>
+            <li class="SubNav8">
+                <a>健康</a>
+                <a>儿童</a>
+                <a class="angle"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                <div class="SideHealthList"></div>
+            </li>
+            <li class="SubNav9">
+                <a>耳机</a>
+                <a>音箱</a>
+                <a class="angle"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                <div class="SideMusicList"></div>
+            </li>
+            <li class="SubNav10">
+                <a>生活</a>
+                <a>箱包</a>
+                <a class="angle"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                <div class="SideLifeList"></div>
+            </li>
+
+        </ul>
+    </div>
+    <div class="banner">
+        <div class="last arrow">
+            <i class="fa fa-angle-left" aria-hidden="true"></i>
+            <div class="left"></div>
+        </div>
+        <div class="button">
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+        </div>
+        <div class="next arrow">
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+            <div class="right"></div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
